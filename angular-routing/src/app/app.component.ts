@@ -14,7 +14,7 @@ export class AppComponent {
   obsTrack: Observable<Object>;
   results: Object;
 
-  constructor(public spotify: SpotifyService) {}
+  constructor(public spotify: SpotifyService) { }
 
   submit(query:HTMLInputElement): void {
     if (!query.value) {
