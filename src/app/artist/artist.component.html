@@ -1,1 +1,13 @@
-<p>artist works!</p>
+<div *ngIf="artist">
+    
+    <hr>
+
+    <h2>{{artist.name}}</h2>
+    <p><b>{{artist.followers.total}}</b> followers</p>
+    <img src="{{artist.images[1].url}}" alt="">
+
+    <h3 class="mt-2">Genres</h3>
+    <i *ngFor='let genre of artist.genres'>{{genre}}, </i>
+
+    <p class="mt-5"><a href (click)="back()">Back</a></p>
+</div>

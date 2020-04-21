@@ -1,0 +1,41 @@
+{
+    "external_urls": {
+        "spotify": "https://open.spotify.com/artist/0O0lrN34wrcuBenkqlEDZe"
+    },
+    "followers": {
+        "href": null,
+        "total": 285321
+    },
+    "genres": [
+        "art rock",
+        "dance rock",
+        "new romantic",
+        "new wave",
+        "new wave pop",
+        "post-punk",
+        "rock"
+    ],
+    "href": "https://api.spotify.com/v1/artists/0O0lrN34wrcuBenkqlEDZe",
+    "id": "0O0lrN34wrcuBenkqlEDZe",
+    "images": [
+        {
+            "height": 640,
+            "url": "https://i.scdn.co/image/110d973ebd18709ec98cb3f0b53aec19d1639301",
+            "width": 640
+        },
+        {
+            "height": 320,
+            "url": "https://i.scdn.co/image/018d17edff33a285e2780835694a99a35b72a08c",
+            "width": 320
+        },
+        {
+            "height": 160,
+            "url": "https://i.scdn.co/image/2f30eda0552fadce647ec06eae0370a94d98b114",
+            "width": 160
+        }
+    ],
+    "name": "The Psychedelic Furs",
+    "popularity": 60,
+    "type": "artist",
+    "uri": "spotify:artist:0O0lrN34wrcuBenkqlEDZe"
+}

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { SpotifyService } from '../spotify.service';
 import { Observable } from 'rxjs';
-import {Location} from '@angular/common';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-track',
@@ -11,12 +11,10 @@ import {Location} from '@angular/common';
 })
 export class TrackComponent implements OnInit {
   
-  //Ossreva i cambi di routing
   routeObs : Observable<ParamMap>;
-  track : any; //Qui salverò la traccia selezionata
-  spotifyServiceObs : Observable<any>; //Osservo il servizio
-  //Usiamo la dependency injection per farci mandare i moduli del routing e dello    
-  //SpotifyService
+  track : any;
+  spotifyServiceObs : Observable<any>;
+
   constructor(
     private route: ActivatedRoute,
     private service: SpotifyService,
@@ -24,16 +22,14 @@ export class TrackComponent implements OnInit {
 
 
   ngOnInit(): void {
-    //Ottengo l'observable che notifica le informazioni sulla route attiva
     this.routeObs = this.route.paramMap;
     this.routeObs.subscribe(this.getRouterParam);
   }
 
-  //Ogni volta che viene invocata la route tracks/:id, l'observable richiama questo metodo
   getRouterParam = (params: ParamMap) =>
   {
-    let trackId = params.get('id'); //Ottengo l'id dai parametri
-    console.log (trackId); //Stampo su console
+    let trackId = params.get('id');
+    console.log (trackId);
     this.spotifyServiceObs = this.service.getTrack(trackId) ;
     this.spotifyServiceObs.subscribe((data)=>this.track = data)
   }
